@@ -38,7 +38,7 @@ const AuthContainer = observer(({ history }) => {
         }
       })
       .catch((err) => {
-        const { status } = err.response;
+        const { status } = err;
         if (status === 400) {
           ErrorToast('아이디나 비밀번호 실패');
         }
@@ -70,7 +70,7 @@ const AuthContainer = observer(({ history }) => {
         }
       })
       .catch((err) => {
-        const { status } = err.response;
+        const { status } = err;
         if (status === 409) {
           ErrorToast('이메일 중복');
         }
