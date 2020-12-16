@@ -38,6 +38,8 @@ const AuthContainer = observer(({ history }) => {
         }
       })
       .catch((err) => {
+        
+        ErrorToast('아이디나 비밀번호 실패');
         const { status } = err;
         if (status === 400) {
           ErrorToast('아이디나 비밀번호 실패');
